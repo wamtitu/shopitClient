@@ -11,7 +11,7 @@ function Profile() {
     const [orders, setOrders] = useState([]);
 
     const fetchOrders = async()=>{
-      const response = await axios.get(`http://localhost:5000/orders/${id}`)
+      const response = await axios.get(`https://shopitweb.azurewebsites.net/orders/${id}`)
       setOrders(response.data)
     }
 

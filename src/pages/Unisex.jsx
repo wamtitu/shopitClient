@@ -8,7 +8,7 @@ function Unisex() {
   const [mens, setMens] = useState();
 
   const fetchMens = async()=>{
-    const response = await axios.get('http://localhost:5000/products/category/unisex')
+    const response = await axios.get('https://shopitweb.azurewebsites.net/products/category/unisex')
     
     setMens(response.data)
    

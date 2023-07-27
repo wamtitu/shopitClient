@@ -5,7 +5,7 @@ function TotalProducts() {
     const [products, setProducts] = useState([]);
     const getProducts = async()=>{
       try {
-        const res = await axios.get('http://localhost:5000/products')
+        const res = await axios.get('https://shopitweb.azurewebsites.net/products')
         setProducts(res.data)
       } catch (error) {
         console.log(error)

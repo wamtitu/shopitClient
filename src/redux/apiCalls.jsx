@@ -1,5 +1,4 @@
-import {createProductFailure, createProductSuccess, createProductStart, getProductFailure, getProductSuccess, getProductStart,
-getProductByIdFailure, getProductByIdSuccess, getProductByIdStart, getProductByIdCategoryMens} from './productSlice';
+import {createProductFailure, createProductSuccess, createProductStart, getProductFailure, getProductSuccess, getProductStart} from './productSlice';
 import {    loginStart,loginFailure,loginSuccess,logout} from './userSlice'
 import axios from 'axios';
 
@@ -7,7 +6,7 @@ import axios from 'axios';
         console.log(user,dispatch);
     dispatch(loginStart());
         try{
-      const {data}=await axios.post(`http://localhost:5000/auth/login`, user);
+      const {data}=await axios.post(`https://shopitweb.azurewebsites.net/auth/login`, user);
     dispatch(loginSuccess(data));
         }catch(err){
     console.log(err)
@@ -22,7 +21,7 @@ dispatch(logout())
 export const addProduct = async (dispatch, productData)=>{
     dispatch(createProductStart())
     try{
-        await axios.post('http://localhost:5000/admin/product', productData) 
+        await axios.post('https://shopitweb.azurewebsites.net/admin/product', productData) 
         dispatch(createProductSuccess(productData))
     }catch(error){
         dispatch(createProductFailure())
@@ -33,7 +32,7 @@ export const addProduct = async (dispatch, productData)=>{
 export const getProducts = async (dispatch)=>{
     dispatch(getProductStart());
     try {
-       const response =  await axios.get("http://localhost:5000/products")
+       const response =  await axios.get("https://shopitweb.azurewebsites.net/products")
         dispatch(getProductSuccess(response.data))
     } catch (error) {
         dispatch(getProductFailure())

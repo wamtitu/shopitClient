@@ -14,7 +14,7 @@ function Users() {
 
     const getUsers = async()=>{
       try {
-        const res = await axios.get('http://localhost:5000/users')
+        const res = await axios.get('https://shopitweb.azurewebsites.net/users')
         setUsers(res.data)
       } catch (error) {
         console.log(error)

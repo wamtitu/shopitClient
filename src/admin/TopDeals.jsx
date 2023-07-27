@@ -6,7 +6,7 @@ function TopDeals() {
     const [topDeal, setTopdeal] = useState([]);
     const topDeals = async()=>{
         try {
-            const top = await axios.get('http://localhost:5000/topdeals');
+            const top = await axios.get('https://shopitweb.azurewebsites.net/topdeals');
         setTopdeal(top.data)
         } catch (error) {
             console.log(error)

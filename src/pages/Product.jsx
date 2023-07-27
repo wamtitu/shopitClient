@@ -12,7 +12,7 @@ import '../styles/product.css'
   const [item, setItem] = useState([]);
    const fetchById = async ()=>{
      try {
-      const response = await axios.get(`http://localhost:5000/products/${id}`)
+      const response = await axios.get(`https://shopitweb.azurewebsites.net/products/${id}`)
       setItem([...response.data])
      } catch (error) {
       console.log(error)

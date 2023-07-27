@@ -26,7 +26,7 @@ function EditProduct() {
 
     const fetchProduct = async ()=>{
         
-        const product = await axios.get(`http://127.0.0.1:5000/products/${id}`)
+        const product = await axios.get(`https://shopitweb.azurewebsites.net/products/${id}`)
         setProductUpdate(...product.data)
     }
 

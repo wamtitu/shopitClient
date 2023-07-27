@@ -31,7 +31,7 @@ function ProductAdmin() {
       console.log(productID)
     }
      const handleDeleteClick = async (productID)=>{
-      await axios.delete(`http://localhost:5000/products/delete/ ${productID}`)
+      await axios.delete(`https://shopitweb.azurewebsites.net/products/delete/ ${productID}`)
       setProducts(products.filter((products) => products.productID !== productID));
       console.log(productID ,"deleted successfully")
      }

@@ -14,7 +14,7 @@ function Orders() {
 
     const getOrders = async()=>{
       try {
-        const res = await axios.get('http://localhost:5000/orders')
+        const res = await axios.get('https://shopitweb.azurewebsites.net/orders')
         setOrders(res.data)
       } catch (error) {
         console.log(error)
@@ -29,7 +29,7 @@ function Orders() {
       console.log("edited")
     }
      const handleDeleteClick = async (orderID)=>{
-      await axios.delete(`http://localhost:5000/orders/delete/ ${orderID}`)
+      await axios.delete(`https://shopitweb.azurewebsites.net/orders/delete/ ${orderID}`)
       setOrders(orders.filter((order) => order.orderID !== orderID));
      }
 

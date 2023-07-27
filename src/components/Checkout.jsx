@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 function CheckOut({cartItems}) {
     const user = useSelector((state)=>state.user?.currentUser?.id)
     const handleCheckout = ()=>{
-        axios.post('http://localhost:5000/create-checkout-session', {
+        axios.post('https://shopitweb.azurewebsites.net/create-checkout-session', {
             userID: user,
             cartItems
         }).then((res)=>{

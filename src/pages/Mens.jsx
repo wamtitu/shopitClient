@@ -1,4 +1,3 @@
-import React from 'react'
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import ProductCard from '../components/ProductCard';
@@ -7,7 +6,7 @@ function Men() {
   const [mens, setMens] = useState();
 
   const fetchMens = async()=>{
-    const response = await axios.get('http://localhost:5000/products/category/mens')
+    const response = await axios.get('https://shopitweb.azurewebsites.net/products/category/mens')
     
     setMens(response.data)
    

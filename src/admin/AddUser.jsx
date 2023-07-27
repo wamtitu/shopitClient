@@ -21,7 +21,7 @@ function Signup() {
     const onsubmit= async (data)=>{
         // event.preventDefault();
         try {
-             await axios.post('http://localhost:5000/auth/register', data)
+             await axios.post('https://shopitweb.azurewebsites.net/auth/register', data)
              navigate('/login')
         } catch (error) {
             console.log(error, ':user already exists')
