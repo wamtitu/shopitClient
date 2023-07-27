@@ -8,15 +8,11 @@ import { useEffect } from 'react'
 
 
 function Navbar() {
-  const navigate = useNavigate()
 
    const {cartItems} = useSelector((state)=>state.cart)
   //  console.log(useSelector((state)=>state.user.currentUser))
    const user = useSelector((state)=>state.user?.currentUser?.token)
    const admin =useSelector((state)=>state.user?.currentUser?.admin)
-if (!user && user !== null){
-  navigate('/login')
-}
 
   //  console.log (user)
    

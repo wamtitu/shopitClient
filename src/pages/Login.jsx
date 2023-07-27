@@ -14,7 +14,7 @@ const schema = yup.object({
 })
 
 function Login() {
-    const user = useSelector((state)=>state.user?.currentUser)
+    const user = useSelector((state)=>state.user?.currentUser.token)
     console.log(user)
 
     const dispatch = useDispatch();
@@ -22,17 +22,10 @@ function Login() {
         resolver: yupResolver(schema)
     });
     const navigate = useNavigate();
-   useEffect(()=>{
-    if  (!user || user === null){
-    
-      navigate('/login' || '/register');
-    
-    }else{
-      navigate('/')
-     }
-   }, [user]);
+   
     const onsubmit= async (data)=>{
         loginUser(dispatch, data)
+        navigate('/')
       
     }
     
