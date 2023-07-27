@@ -17,7 +17,7 @@ import {ToastContainer} from 'react-toastify'
 import CheckoutSuccess from './components/CheckoutSuccess';
 import Women from './pages/Women';
 import Men from './pages/Mens';
-import Unisex from './pages/unisex';
+import Unisex from './pages/Unisex';
 import Admin from './pages/Admin';
 import EditProduct from './admin/EditProduct';
 import {useSelector} from 'react-redux'
