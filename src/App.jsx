@@ -31,7 +31,7 @@ function App() {
       <ToastContainer/>
       <Navbar/>
         <Routes>
-        <Route path='/' element = {user && <Home/>}></Route>
+        <Route path='/' element = {<Home/>}></Route>
         <Route path='/product/:id' element = {<Product/>}></Route>
         <Route path='/cart' element = {<Cart/>}></Route>
         <Route path='/checkout-success' element = {<CheckoutSuccess/>}></Route>

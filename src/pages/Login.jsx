@@ -25,7 +25,7 @@ function Login() {
    useEffect(()=>{
     if  (!user || user === null){
     
-      navigate('/login');
+      navigate('/login' || '/register');
     
     }else{
       navigate('/')
