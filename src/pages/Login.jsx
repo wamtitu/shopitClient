@@ -14,8 +14,7 @@ const schema = yup.object({
 })
 
 function Login() {
-    const user = useSelector((state)=>state.user?.currentUser.token)
-    console.log(user)
+    const user = useSelector((state)=>state.user?.currentUser?.token)
 
     const dispatch = useDispatch();
     const {register, handleSubmit, formState:{errors}} = useForm({

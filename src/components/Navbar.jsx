@@ -44,10 +44,6 @@ function Navbar() {
           </>
         ):(
           <>
-              <div className="search">
-                 <input type="text"/>
-                 <button>search</button>
-             </div>
          <ul>
              <Link to = '/'>home</Link>
              <Link to = '/categories/womens'>womens</Link>
